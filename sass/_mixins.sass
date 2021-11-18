@@ -1,17 +1,15 @@
 /*========== MIXINS ==========*/
 @mixin flex-row($mainAxisValue,$crossAxisValue)
 	display: flex
-	display: -webkit-box
-	display: -ms-flexbox
+	flex-direction: row
 	@include justify-content($mainAxisValue)
 	@include align-items($crossAxisValue)
 
 @mixin flex-column ($mainAxisValue,$crossAxisValue)
+	display: flex
 	flex-direction: column	
-	-webkit-box-orient: vertical
-	-webkit-box-direction: normal
-	-ms-flex-direction: column
-	@include flex-row($mainAxisValue,$crossAxisValue)
+	@include justify-content($mainAxisValue)
+	@include align-items($crossAxisValue)
     
 @mixin justify-content($mainAxisValue)
 	justify-content: $mainAxisValue

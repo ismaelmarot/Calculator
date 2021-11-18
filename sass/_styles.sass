@@ -25,8 +25,16 @@
              margin: 1.5rem
 
              .previous-value , .current-value
+                @include mix.flex-row (flex-end,center)
                 height: 2.5rem
+                padding-right: .2rem        
+                font-size: 1.5rem                  
+                color: white
 
+             .previous-value
+                 font-size: 2rem
+
+                
          .buttons-row
             @include mix.flex-row(center,center)
             margin: .5rem 2rem
